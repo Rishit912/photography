@@ -9,4 +9,8 @@
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "dist"
+  ,
+  "env": {
+    "VITE_API_URL": "https://photography-backend-wgu4.vercel.app"
+  }
 }
