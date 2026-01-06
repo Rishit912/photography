@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
   "installCommand": "npm ci",
-  "buildCommand": "node ./node_modules/vite/bin/vite.js build",
-  "outputDirectory": "dist"
-  ,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "env": {
     "VITE_API_URL": "https://photography-backend-wgu4.vercel.app"
   }
