@@ -364,11 +364,15 @@ app.post('/api/contact', async (req, res) => {
 
 init()
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`API running on http://localhost:${PORT}`)
-    })
+    if (process.env.VERCEL !== '1') {
+      app.listen(PORT, () => {
+        console.log(`API running on http://localhost:${PORT}`)
+      })
+    }
   })
   .catch(err => {
     console.error('Failed to init database', err)
     process.exit(1)
   })
+
+module.exports = app
